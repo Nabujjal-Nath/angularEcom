@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild,  } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-seller-auth',
@@ -11,5 +12,9 @@ export class SellerAuthComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  onSubmit(formData:NgForm):void{
+    console.log("Data::"+ formData.value.name)
+  }
 
 }
+
