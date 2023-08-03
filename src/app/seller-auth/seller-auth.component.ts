@@ -1,5 +1,7 @@
-import { Component, OnInit, ViewChild,  } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { SellerService } from 'src/service/seller.service';
 
 @Component({
   selector: 'app-seller-auth',
@@ -8,12 +10,17 @@ import { NgForm } from '@angular/forms';
 })
 export class SellerAuthComponent implements OnInit {
 
-  constructor() { }
+  constructor(private seller: SellerService, private router: Router ) { }
 
   ngOnInit(): void {
   }
-  onSubmit(formData:NgForm):void{
-    console.log("Data::"+ formData.value.name)
+  sellerSignup(formData:NgForm):void{
+    this.seller.signupSellerApi(formData).subscribe((sellerData)=>{
+      console.log("Seller Data is::",sellerData);
+      this.router.navigate(['seller-home']);
+      
+    })
+
   }
 
 }
