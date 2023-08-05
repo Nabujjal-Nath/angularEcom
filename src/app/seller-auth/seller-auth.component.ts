@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { SellerService } from 'src/service/seller.service';
+import { SellerService } from 'src/app/service/seller.service';
 
 @Component({
   selector: 'app-seller-auth',
