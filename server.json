@@ -11,6 +11,12 @@
       "email": "nabujjal@yahoo.com",
       "password": "12345",
       "id": 2
+    },
+    {
+      "name": "naruto",
+      "email": "naruto@gmail.com",
+      "password": "123sdad",
+      "id": 4
     }
   ]
 }
