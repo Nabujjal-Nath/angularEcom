@@ -1,12 +1,28 @@
 
 <h1>Seller Form</h1>
 <div class="form-container">
-    <form  class="form-control" (ngSubmit)="sellerSignup(formTemplate.value)" #formTemplate="ngForm">
-        <input class="form-input" type="text" placeholder="Name" ngModel name="name" required>
-        <input class="form-input" type="email" placeholder="email" ngModel name="email" email required #email="ngModel">
-        <span class="error" *ngIf="!email.valid && email.touched">Please enter a valid email!</span>
-        <input class="form-input" type="password" placeholder="password" ngModel name="password" required>
-        <button class="form-button" type="submit">SignUp</button>
-    </form>
+    <div class="SignUp" *ngIf="!show; else login ">
+        <h1>Seller Registration</h1>
+        <form  class="form-control" (ngSubmit)="sellerSignup(formTemplate.value)" #formTemplate="ngForm">
+            <input class="form-input" type="text" placeholder="Name" ngModel name="name" required>
+            <input class="form-input" type="email" placeholder="email" ngModel name="email" email required #email="ngModel">
+            <span class="error" *ngIf="!email.valid && email.touched">Please enter a valid email!</span>
+            <input class="form-input" type="password" placeholder="password" ngModel name="password" required>
+            <button class="form-button" type="submit">SignUp</button>
+            <span>Already have an account? <a style="color:purple" (click)="openLogin()">Login</a></span>
+        </form>
+    </div>
+    <ng-template class="Login" #login>
+        <h1>Seller Login</h1>
+        <p class="error">{{authError}}</p>
+        <form  class="form-control" (ngSubmit)="sellerLogin(formTemplate.value)" #formTemplate="ngForm">
+            <input class="form-input" type="email" placeholder="email" ngModel name="email" email required #email="ngModel">
+            <span class="error" *ngIf="!email.valid && email.touched">Please enter a valid email!</span>
+            <input class="form-input" type="password" placeholder="password" ngModel name="password" required>
+            <button class="form-button" type="submit">Login</button>
+            <span>New Customer? <a style="color:purple" (click)="openSignup()">SignUp</a></span>
+        </form>
+    </ng-template>
+
 </div>
 
