@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  headerType:string='default'
+  constructor(private route:Router) { }
 
   ngOnInit(): void {
+    this.route.events.subscribe((urlData:any)=>{
+      if(urlData.url){   //url could be null or undefined
+        if(localStorage.getItem('seller-data') && urlData.url.includes('seller')){
+          this.headerType='seller-header';
+        }
+        else{
+          this.headerType='default';
+        }
+      }
+    })
   }
 
 }

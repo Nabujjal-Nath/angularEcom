@@ -1,13 +1,21 @@
 <nav class="nav">
-  <h1>NJN</h1>
-  <div class="nav-search" >
-    <input class="search" type="text" placeholder="Item Name" />
-    <button class="search-button">Search</button>
-  </div>
-    <ul>
-      <li><a routerLink="">Home</a></li>
-      <li><a routerLink="seller-auth">Seller</a></li>
-      <li><a href="#">Login</a></li>
-      <li><a href="#">Cart</a></li>
+  <h1><a routerLink="">NJN</a></h1>
+    <div class="nav-search" *ngIf="headerType=='default'">
+      <input class="search" type="text" placeholder="Item Name" />
+      <button class="search-button">Search</button>
+    </div>
+    <div [ngSwitch]="headerType">
+      <ul *ngSwitchCase="'default'">
+          <li><a routerLink="">Home</a></li>
+          <li><a routerLink="seller-auth">Seller</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Cart</a></li>
+      </ul>
+      <ul *ngSwitchCase="'seller-header'">
+        <li><a routerLink="seller-auth">SellerName</a></li>
+        <li><a>Product List</a></li>
+        <li><a>Add Product</a></li>
+        <li><a>Logout</a></li>
     </ul>
+  </div>
 </nav>
