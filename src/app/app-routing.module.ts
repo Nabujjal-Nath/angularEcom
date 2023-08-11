@@ -18,11 +18,13 @@ const routes: Routes = [
   },
   {
     path:'seller-product-list',
-    component: ProductListComponent
+    component: ProductListComponent,
+    canActivate:[AuthSellerGuard]
   },
   {
     path:'seller-add-product',
-    component: AddProductComponent
+    component: AddProductComponent,
+    canActivate:[AuthSellerGuard]
   },
   {
     path:'seller-home',

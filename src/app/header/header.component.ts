@@ -22,5 +22,8 @@ export class HeaderComponent implements OnInit {
       }
     })
   }
-
+  logout(){
+    localStorage.removeItem('seller-data');
+    this.route.navigate(["/"]);
+  }
 }
