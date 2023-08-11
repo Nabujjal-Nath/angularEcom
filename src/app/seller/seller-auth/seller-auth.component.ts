@@ -21,8 +21,11 @@ export class SellerAuthComponent implements OnInit {
 
   sellerLogin(formData:Login):void{
     this.sellerService.loginSellerAPI(formData);
-    if(this.sellerService.isLoginFailed)
-      this.authError="Incorrect Email or Password!"
+    this.sellerService.isLoginFailed.subscribe((error)=>{
+      if(error)
+        this.authError="Incorrect Email or Password!"
+    })
+
   }
 
   openSignup():void{
