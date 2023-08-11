@@ -7,7 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  headerType:string='default'
+  headerType:string='default';
+  sellerName:string="";
   constructor(private route:Router) { }
 
   ngOnInit(): void {
@@ -15,6 +16,9 @@ export class HeaderComponent implements OnInit {
       if(urlData.url){   //url could be null or undefined
         if(localStorage.getItem('seller-data') && urlData.url.includes('seller')){
           this.headerType='seller-header';
+          const store= localStorage.getItem('seller-data');
+          const storeData = store && JSON.parse(store)[0];
+          this.sellerName= storeData.name;
         }
         else{
           this.headerType='default';
