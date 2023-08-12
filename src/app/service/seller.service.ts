@@ -22,7 +22,7 @@ export class SellerService {
   loginSellerAPI(body:Login){
     return this.http.get(`http://localhost:3000/seller?email=${body.email}&password=${body.password}`,{observe:'response'})
     .subscribe((response:any)=>{  // without any response is treated as an object so response.body.length throws error, MUST FIX IT!
-      if(response && response.body && response.body.length){
+      if(response && response.body && response.body.length){ // GET call return response with no body or empty body
         localStorage.setItem('seller-data',JSON.stringify(response.body)); // localStorage store data in string
         this.router.navigate(['seller-home']);
       }

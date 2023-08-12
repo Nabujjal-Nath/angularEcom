@@ -17,11 +17,28 @@
       "email": "naruto@gmail.com",
       "password": "123sdad",
       "id": 4
+    }
+  ],
+  "product": [
+    {
+      "name": "IPhone",
+      "price": "1.5lac",
+      "weight": "250gm",
+      "category": "Phone",
+      "color": "Black",
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSOO1JDPUNwcPiqzHYhaL_zpJA0Ymlr6mD9sSgTPad_JYdrk-o",
+      "description": "A black IPhone with 108MP tripple camera ",
+      "id": 1
     },
     {
-      "email": "apamabld@a.com",
-      "password": "20trytryagain>>20ANDHOPE",
-      "id": 5
+      "name": "IPhone12",
+      "price": "1lac",
+      "weight": "250gm",
+      "category": "Phone",
+      "color": "White",
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSOO1JDPUNwcPiqzHYhaL_zpJA0Ymlr6mD9sSgTPad_JYdrk-o",
+      "description": "A white IPhone with 108MP tripple camera ",
+      "id": 2
     }
   ]
 }
