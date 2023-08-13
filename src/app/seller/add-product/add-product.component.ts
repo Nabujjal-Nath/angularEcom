@@ -16,7 +16,6 @@ export class AddProductComponent implements OnInit {
   addProduct(productDetails:ProductDetails){
     this.productService.addProductAPI(productDetails).subscribe((response:any)=>{
       if(response.body){
-        console.log("Response bidy is::",response.body);
         this.successMsg="Product added succesfully!"
         setTimeout(()=>{
           this.successMsg=undefined;

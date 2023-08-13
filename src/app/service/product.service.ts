@@ -10,7 +10,14 @@ import { HttpClient } from "@angular/common/http";
     addProductAPI(body:ProductDetails){  
         return this.http.post('http://localhost:3000/product',body, {observe:'response'});
     }
+
     productListAPI(){
       return this.http.get<ProductDetails[]>('http://localhost:3000/product');
     }
+
+    productDeleteAPI(id:Number){
+      return this.http.delete(`http://localhost:3000/product/${id}`);
+    }
+
+    
   }
