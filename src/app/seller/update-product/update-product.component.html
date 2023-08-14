@@ -1,0 +1,52 @@
+<div >
+    <form class="form-control" (ngSubmit)="updateProduct(updateProductTemplate.value)" #updateProductTemplate="ngForm">
+        <h1>Update product specification</h1>
+        <span style="color: green;">{{updateSuccessMsg}}</span>
+        <input class="form-input"
+            type="text" 
+            placeholder="Product Name" 
+            ngModel="{{productData?.name}}" 
+            name="name" 
+            required>
+        <input class="form-input" 
+            type="text" 
+            placeholder="Product Price" 
+            ngModel="{{productData?.price}}" 
+            name="price" 
+            required>
+        <input class="form-input" 
+            type="text" 
+            placeholder="Product Weight" 
+            ngModel="{{productData?.weight}}" 
+            name="weight" 
+            required>
+        <input class="form-input" 
+            type="text" 
+            placeholder="Product Category" 
+            ngModel="{{productData?.category}}" 
+            name="category" 
+            required>
+        <input class="form-input" 
+            type="text" 
+            placeholder="Product Color" 
+            ngModel="{{productData?.color}}" 
+            name="color" 
+            required>
+        <input class="form-input" 
+            type="img" 
+            placeholder="Product image URL" 
+            ngModel="{{productData?.image}}" 
+            name="image" 
+            required>
+        <textarea
+            class="form-input"
+            type="text" 
+            placeholder="Product description" 
+            ngModel="{{productData?.description}}"
+            name="description"
+            required>
+        </textarea>
+        <button class="form-button" type="submit">Update Product</button>
+    </form>
+</div>
+

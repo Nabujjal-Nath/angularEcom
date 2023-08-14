@@ -19,5 +19,13 @@ import { HttpClient } from "@angular/common/http";
       return this.http.delete(`http://localhost:3000/product/${id}`);
     }
 
+    getProductByIdAPI(id:string){
+      return this.http.get<ProductDetails>(`http://localhost:3000/product/${id}`);
+    }
+
+    updateProductAPI(body:ProductDetails){
+      return this.http.put(`http://localhost:3000/product/${body.id}`,body);
+    }
+
     
   }
