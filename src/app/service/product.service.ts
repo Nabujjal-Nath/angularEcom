@@ -27,5 +27,9 @@ import { HttpClient } from "@angular/common/http";
       return this.http.put(`http://localhost:3000/product/${body.id}`,body);
     }
 
+    getTrendingProducts(){
+      return this.http.get<ProductDetails[]>(`http://localhost:3000/product?_limit=4`);
+    }
+
     
   }

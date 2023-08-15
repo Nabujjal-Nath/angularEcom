@@ -39,6 +39,17 @@
       "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSOO1JDPUNwcPiqzHYhaL_zpJA0Ymlr6mD9sSgTPad_JYdrk-o",
       "description": "A purple IPhone with 108MP tripple camera ",
       "id": 2
+    },
+    {
+      "name": "IPhone12",
+      "price": "1lac",
+      "weight": "250gm",
+      "category": "Phone",
+      "color": "Maroon",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-13-pro-max-graphite-2023?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1679072989055",
+      "description": "A Maroon IPhone with 108MP tripple camera ",
+      "id": 2
     }
+
   ]
 }

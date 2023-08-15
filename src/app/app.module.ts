@@ -12,6 +12,7 @@ import { SellerHomeComponent } from './seller/seller-home/seller-home.component'
 import { ProductListComponent } from './seller/product-list/product-list.component';
 import { AddProductComponent } from './seller/add-product/add-product.component';
 import { UpdateProductComponent } from './seller/update-product/update-product.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { UpdateProductComponent } from './seller/update-product/update-product.c
     CommonModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
