@@ -31,5 +31,8 @@ import { HttpClient } from "@angular/common/http";
       return this.http.get<ProductDetails[]>(`http://localhost:3000/product?_limit=4`);
     }
 
+    getPopularProducts(){
+      return this.http.get<ProductDetails[]>(`http://localhost:3000/product?_limit=8`);
+    }
     
   }

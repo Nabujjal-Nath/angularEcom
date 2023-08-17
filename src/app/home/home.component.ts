@@ -22,4 +22,11 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  popularProduct(){
+    this.productService.getPopularProducts().subscribe((data)=>{
+      console.log("Data is:",data);
+      this.trendingProducts= data;
+    })
+  }
+
 }
